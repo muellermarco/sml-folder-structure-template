@@ -1,0 +1,16 @@
+unique_name: training
+object_type: model
+label: Training
+dimensions: []
+metrics:
+  - unique_name: m_factinternetsales_orderquantity_sum
+    folder: Sales Measures
+relationships:
+  - unique_name: factinternetsales_orderdatekey_to_d_date_date
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: d_date
+      level: date
